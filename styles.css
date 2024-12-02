@@ -1,0 +1,267 @@
+/* Styles globaux pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif; /* Police principale */
+    background-color: #f4f4f4; /* Fond de page léger */
+    margin: 0; /* Pas d'espace autour de la page */
+    padding: 0;
+    box-sizing: border-box; /* Inclut la marge et le padding dans les dimensions */
+    color: #333; /* Couleur de texte principale */
+    line-height: 1.6; /* Augmente la lisibilité du texte */
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #333; /* Couleur de fond sombre */
+    color: white; /* Texte en blanc */
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile sous l'en-tête */
+}
+
+/* Titre du site */
+header h1 {
+    font-size: 2.5em; /* Taille du titre */
+    margin: 0;
+}
+/* Met en valeur "Patchamen" avec une couleur différente */
+.patchamen {
+    color: #e74c3c; /* Rouge pour différencier le nom */
+    font-style: italic; /* Italique pour plus de style */
+}
+/* Liste des liens de navigation */
+header nav ul {
+    list-style: none; /* Pas de puces */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Affichage en ligne */
+    justify-content: center; /* Centrer les liens */
+    margin-top: 20px;
+}
+
+/* Lien individuel */
+header nav ul li {
+    margin: 0 15px; /* Espacement entre les éléments */
+}
+
+header nav ul li a {
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Pas de soulignement */
+    padding: 10px 15px;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s; /* Effet de transition pour le survol */
+}
+
+/* Effet au survol */
+header nav ul li a:hover {
+    background-color: #555; /* Change le fond lorsqu'on survole */
+    transform: translateY(-2px); /* Légère élévation de l'élément */
+}
+.produkt {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+/* Section des produits */
+#products-section {
+    padding: 3em 2em; /* Espacement autour */
+    background-color: #f8f8f8; /* Couleur de fond claire */
+}
+
+/* Liste des produits */
+#products-list {
+    display: flex;
+    flex-wrap: wrap; /* Permet de revenir à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre les éléments */
+    justify-content: center; /* Centrer les produits */
+}
+
+/* Carte individuelle pour un produit */
+.product-card {
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet 3D */
+    text-align: center;
+    border-radius: 8px; /* Bords arrondis */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition pour l'effet au survol */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Légère élévation de la carte */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+/* Image du produit */
+.product-card img {
+    width: 100%; /* Adapte l'image à la largeur de la carte */
+    height: auto;
+    border-radius: 5px; /* Arrondi des coins de l'image */
+}
+
+/* Description du produit */
+.product-card h3 {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+/* Bouton pour ajouter au panier */
+.product-card button {
+    margin-top: 15px;
+    background-color: #218838; /* Vert pour attirer l'attention */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px; /* Bords arrondis */
+    transition: background-color 0.3s, transform 0.3s; /* Effet de transition pour le survol */
+}
+
+.product-card button:hover {
+    background-color: #218838; /* Couleur plus foncée au survol */
+    transform: translateY(-2px); /* Effet d'élévation */
+transform: scale(1.1); /* Augmenter la taille du bouton au survol */
+}
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 1.5em;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile au-dessus du pied de page */
+}
+/* Messages de réponse */
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Animation du panier */
+#cart-items .cart-item {
+    animation: fadeIn 0.5s ease-out;
+
+}
+
+#cart-count {
+    font-size: 1.2rem;
+    display: flex;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    line-height: 20px;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute; /* Pour le placer précisément */
+    margin-left: 5px; /* Ajustez selon le design */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#cart-section  {
+border: 1px solid rgb(255, 0, 0);
+  display: inline-block;
+  position: fixed;
+  top: 300px;
+  right: 10px;
+  background-color: rgb(252, 255, 240);
+  overflow: auto;
+ height: 500px;
+ width: 200px; /* Largeur plus large pour le cadre */
+}
+
+/* Styles pour le compteur du panier */
+#warenkorb-count {
+    font-weight: bold;
+    color: red;
+}
+button {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/* Rendre l'icône SVG rouge et ajuster l'espacement */
+.navbar .bi-cart-plus {
+    fill: red; /* Change la couleur de l'icône en rouge */
+    margin-left: 5px; /* Réduit l'espace entre "Warenkorb" et l'icône */
+    vertical-align: middle; /* Aligne l'icône verticalement avec le texte */
+    font-size: 1.2em; /* Ajuste la taille de l'icône si nécessaire */
+}
+
+/* Si nécessaire, ajustez le lien global pour un meilleur positionnement */
+.navbar a.warenkorb-link {
+    display: flex; /* Met le texte et l'icône sur la même ligne */
+    align-items: center; /* Aligne verticalement les deux éléments */
+    gap: 5px; /* Ajoute un petit espace entre le texte et l'icône */
+}
+
+/* Styles du compteur du panier */
+#warenkorb-count {
+    font-weight: bold;
+    color: red;
+}
+/* Définir l'arrière-plan de la page en gris */
+body {
+    background-color: #f0f0f0; /* Gris clair */
+    font-family: Arial, sans-serif; /* Police de caractères */
+}
+
+/* Styliser le titre "Ihr Warenkorb" */
+#cart-section h2 {
+    color: #28a745; /* Vert */
+    font-size: 2em; /* Taille du texte augmentée */
+    font-weight: bold; /* Mettre en gras */
+}
+
+/* Optionnel : Styliser le bouton pour qu'il soit plus visible */
+button {
+    background-color: #28a745; /* Vert pour le bouton */
+    color: white; /* Texte en blanc */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838; /* Couleur verte plus foncée au survol */
+}
+
+/* Optionnel : Ajouter du style à l'élément footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #007bff; /* Couleur bleue pour le lien */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warenkorb</title>
+    <style>
+        body {
+            background-color: #c0b5b5;
+            font-family: Arial, sans-serif;
+        }
+
+        #cart-section h2 {
+            color: #000000;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #858e87;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #385c40;
+        }
+    </style>
+</head>
+<body> 
+  
+    <!-- En-tête -->
+    <header>
+        <nav>
+            <!-- Vous pouvez ajouter des éléments de navigation ici, comme un logo ou des liens -->
+        </nav>
+    </header>
+
+    <!-- Section pour afficher les articles du panier -->
+    <section id="cart-section">
+        <h2>Ihr Warenkorb</h2>
+        <div id="cart-items">
+            <!-- Les articles seront ajoutés ici dynamiquement via JavaScript -->
+        </div>
+        <button onclick="placeOrder()">Bestellung abschließen</button>
+    </section>
+
+    <!-- Zone pour afficher les messages de confirmation ou d'erreur -->
+    <div id="response-message"></div>
+
+    <!-- Message de confirmation de commande -->
+    <div id="order-confirmation" style="display: none;">
+        <h1>Ihre Bestellung wurde erfolgreich aufgegeben!</h1>
+        <p>Vielen Dank für Ihre Bestellung. Sie erhalten eine Bestätigung per E-Mail.</p>
+    </div>
+
+    <!-- Footer avec lien vers la page d'accueil -->
+    <footer>
+        <a href="./index.html">Zurück zur Startseite</a>
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="./cart.js"></script>
+    
+</body>
+</html>
